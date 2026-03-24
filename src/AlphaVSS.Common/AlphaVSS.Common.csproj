@@ -1,8 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
    <PropertyGroup>
-    <TargetFrameworks>net45;netcoreapp3.1</TargetFrameworks>
+    <TargetFrameworks>net8.0</TargetFrameworks>
     <IsPackable>false</IsPackable>
+    <Configurations>Debug;Release</Configurations>
+    <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
 
    <Import Project="..\AlphaVSS.props" />
@@ -18,9 +20,10 @@
     <NeutralLanguage>en-US</NeutralLanguage>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <OutputPath>..\..\artifacts</OutputPath>
-    <RootNamespace>Alphaleonis.Win32.Vss</RootNamespace>
     <ApplicationIcon />
     <Win32Resource />
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <RootNamespace>Alphaleonis.Win32.Vss</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

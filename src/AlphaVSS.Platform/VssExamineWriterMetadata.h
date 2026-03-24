@@ -42,7 +42,6 @@ namespace Alphaleonis { namespace Win32 { namespace Vss
       property System::Version^ Version { virtual System::Version^ get(); }
       property IList<VssWMFileDescriptor^>^ ExcludeFromSnapshotFiles { virtual IList<VssWMFileDescriptor^>^ get(); }
    internal:
-      [SecurityPermission(SecurityAction::LinkDemand)]
       static IVssExamineWriterMetadata^ Adopt(::IVssExamineWriterMetadata *ewm);
    private:
       VssExamineWriterMetadata(::IVssExamineWriterMetadata *examineWriterMetadata);

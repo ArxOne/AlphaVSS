@@ -14,14 +14,14 @@ Do not install this package manually, it will be added as a prerequisite by the 
       <tags>Win32, VSS</tags>
       <repository type="git" url="https://github.com/alphaleonis/AlphaVSS.git" branch="$branch$" commit="$commit$" />
       <dependencies>
-         <group targetFramework="net45" />
+         <group targetFramework="net8.0" />
       </dependencies>
    </metadata>   
    <files>
-      <!-- net45 -->
-      <file src="_._" target="lib\net45" />
-      <file src="..\..\artifacts\net45\x86\AlphaVSS.x86.dll" target="build\net45" />
-      <file src="..\..\artifacts\net45\x64\AlphaVSS.x64.dll" target="build\net45" />
-      <file src="AlphaVSS.Native.NetFx.targets" target="build\net45" />
+      <!-- net8.0 -->
+      <file src="_._" target="lib\net8.0" />
+      <file src="..\..\artifacts\net8.0\x86\AlphaVSS.x86.dll" target="build\net8.0" />
+      <file src="..\..\artifacts\net8.0\x64\AlphaVSS.x64.dll" target="build\net8.0" />
+      <file src="AlphaVSS.Native.NetFx.targets" target="build\net8.0" />
    </files>
 </package>

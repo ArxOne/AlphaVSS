@@ -6,6 +6,7 @@ using System.IO;
 using System.Threading;
 using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 #if NETCOREAPP
 using System.Runtime.Loader;
 #endif
@@ -25,7 +26,7 @@ namespace Alphaleonis.Win32.Vss
       private readonly IVssAssemblyResolver m_resolver;
       private readonly Lazy<Assembly> m_assembly;
 
-      private static string PlatformSpecificAssemblyShortName => $"AlphaVSS.{(Environment.Is64BitOperatingSystem ? "x64" : "x86")}";
+      private static string PlatformSpecificAssemblyShortName => $"AlphaVSS.{(RuntimeInformation.ProcessArchitecture switch { Architecture.X64 => "x64", Architecture.X86 => "x86", Architecture.Arm => "arm32", Architecture.Arm64 => "arm64", _ => throw new PlatformNotSupportedException() })}";
       private static AssemblyName PlatformSpecificAssemblyName => new AssemblyName($"{PlatformSpecificAssemblyShortName}, Version={Assembly.GetExecutingAssembly().GetName().Version}, Culture=neutral, PublicKeyToken=959d3993561034e3");
 
       /// <summary>

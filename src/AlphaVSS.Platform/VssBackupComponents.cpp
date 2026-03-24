@@ -123,7 +123,6 @@ namespace Alphaleonis {
             return ToGuid(idSnapshot);
          }
 
-         [SecurityPermissionAttribute(SecurityAction::LinkDemand)]
          void VssBackupComponents::BackupComplete()
          {
             ::IVssAsync* pAsync;

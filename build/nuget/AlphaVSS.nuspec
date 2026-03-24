@@ -9,29 +9,21 @@
       <projectUrl>https://alphavss.alphaleonis.com/</projectUrl>
       <requireLicenseAcceptance>true</requireLicenseAcceptance>
       <description>AlphaVSS is a .NET class library providing a managed API for the Windows Volume Shadow Copy Service also known as VSS.</description>
-      <releaseNotes>- Added support for .NET Core 3.1.
-- Added TPL style async methods for asynchronous methods on IVssBackupComponents.</releaseNotes>
+      <releaseNotes>- Added support for .NET 8.0
+      - Added support </releaseNotes>
       <copyright>Copyright © Peter Palotas</copyright>      
       <tags>Win32, VSS</tags>
       <repository type="git" url="https://github.com/alphaleonis/AlphaVSS.git" branch="$branch$" commit="$commit$" />
       <dependencies>
-         <group targetFramework="net45">
-            <dependency id="AlphaVSS.Native.NetFx" version="[$version$]" />
-         </group>
-         <group targetFramework="netcoreapp3.1" >
+         <group targetFramework="net8.0" >
             <dependency id="AlphaVSS.Native.NetCore"  version="[$version$]" />
          </group>
       </dependencies>
    </metadata>   
    <files>
-      <!-- net45 -->
-      <file src="..\..\artifacts\net45\AlphaVSS.Common.dll" target="lib\net45" />
-      <file src="..\..\artifacts\net45\AlphaVSS.Common.xml" target="lib\net45" />
-      <file src="..\..\artifacts\net45\AlphaVSS.Common.pdb" target="lib\net45" />
-
-      <!-- netcoreapp3.1 -->
-      <file src="..\..\artifacts\netcoreapp3.1\AlphaVSS.Common.dll" target="lib\netcoreapp3.1" />
-      <file src="..\..\artifacts\netcoreapp3.1\AlphaVSS.Common.pdb" target="lib\netcoreapp3.1" />
-      <file src="..\..\artifacts\netcoreapp3.1\AlphaVSS.Common.xml" target="lib\netcoreapp3.1" />
+      <!-- net8.0 -->
+      <file src="..\..\artifacts\net8.0\AlphaVSS.Common.dll" target="lib\net8.0" />
+      <file src="..\..\artifacts\net8.0\AlphaVSS.Common.pdb" target="lib\net8.0" />
+      <file src="..\..\artifacts\net8.0\AlphaVSS.Common.xml" target="lib\net8.0" />
    </files>
 </package>
