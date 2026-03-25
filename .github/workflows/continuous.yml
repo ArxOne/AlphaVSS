@@ -44,6 +44,6 @@ jobs:
             .nuke/temp
             ~/.nuget/packages
           key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj', '**/Directory.Packages.props') }}
-      - name: 'Run: Push'
+      - name: 'Run: Pack'
         shell: pwsh
-        run: ./build.ps1 Push
+        run: ./build.ps1 Pack
