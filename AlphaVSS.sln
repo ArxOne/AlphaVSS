@@ -24,6 +24,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AlphaVSS.Platform", "src\Al
 		{2276E222-6841-4DA9-B5C9-549E9ADB33BE} = {2276E222-6841-4DA9-B5C9-549E9ADB33BE}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_build", "build\_build.csproj", "{4056BD12-5FA8-4D2E-274A-7E85E858A5FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		NET8|ARM64 = NET8|ARM64
@@ -58,6 +60,12 @@ Global
 		{3A977469-6361-469C-B180-5180CD9A15B4}.net8d|x64.Build.0 = net8d|x64
 		{3A977469-6361-469C-B180-5180CD9A15B4}.net8d|x86.ActiveCfg = net8d|Win32
 		{3A977469-6361-469C-B180-5180CD9A15B4}.net8d|x86.Build.0 = net8d|Win32
+		{4056BD12-5FA8-4D2E-274A-7E85E858A5FC}.NET8|ARM64.ActiveCfg = net8d|Any CPU
+		{4056BD12-5FA8-4D2E-274A-7E85E858A5FC}.NET8|x64.ActiveCfg = net8d|Any CPU
+		{4056BD12-5FA8-4D2E-274A-7E85E858A5FC}.NET8|x86.ActiveCfg = net8d|Any CPU
+		{4056BD12-5FA8-4D2E-274A-7E85E858A5FC}.net8d|ARM64.ActiveCfg = Release|Any CPU
+		{4056BD12-5FA8-4D2E-274A-7E85E858A5FC}.net8d|x64.ActiveCfg = net8d|Any CPU
+		{4056BD12-5FA8-4D2E-274A-7E85E858A5FC}.net8d|x86.ActiveCfg = net8d|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

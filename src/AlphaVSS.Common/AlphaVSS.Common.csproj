@@ -1,10 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
    <PropertyGroup>
-    <TargetFrameworks>net8.0</TargetFrameworks>
+    <TargetFramework>net8.0</TargetFramework>
     <IsPackable>false</IsPackable>
-    <Configurations>Debug;Release</Configurations>
-    <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
 
    <Import Project="..\AlphaVSS.props" />
@@ -31,12 +29,6 @@
     <None Include="..\..\build\AlphaVSS.snk">
       <Link>AlphaVSS.snk</Link>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.7">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Resources\LocalizedStrings.Designer.cs">
