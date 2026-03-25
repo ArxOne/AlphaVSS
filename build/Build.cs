@@ -20,7 +20,6 @@ using static Nuke.Common.EnvironmentInfo;
 using static Nuke.Common.Tools.NuGet.NuGetTasks;
 using static Nuke.Common.IO.PathConstruction;
 using static Nuke.Common.Tools.MSBuild.MSBuildTasks;
-using Nuke.Common.CI.AzurePipelines;
 using System.Threading;
 using System.Text;
 
@@ -74,12 +73,7 @@ class AlphaVssBuild : NukeBuild
             .SetFormat(VSWhereFormat.value)
       ).Output.LastOrDefault().Text;
 
-      MSBuildToolPath = Path.Combine(result ?? "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools", "MSBuild\\Current\\Bin\\MSBuild.exe");
-      if (IsServerBuild)
-      {
-         AzurePipelines.Instance.UpdateBuildNumber($"AlphaVSS-{GitVersion.SemVer}")
-            ;
-      }
+      MSBuildToolPath = Path.Combine(result ?? @"C:\Program Files (x86)\Microsoft Visual Studio\18\BuildTools", "MSBuild\\Current\\Bin\\MSBuild.exe");
    }
 
    Target Clean => _ => _
@@ -179,42 +173,5 @@ class AlphaVssBuild : NukeBuild
                .SetTargetPath(file));
          }
       });
-
-   Target UploadArtifacts => _ => _
-      .DependsOn(Clean, Pack)
-      .OnlyWhenStatic(() => IsServerBuild)
-      .Executes(() =>
-      {
-         foreach (var file in ArtifactsDirectory.GlobFiles("*.nupkg"))
-         {
-            UploadAzureArtifact("Package", "Package", file);
-         }
-         //UploadAzureArtifact("Package", "Package", null);
-
-         Thread.Sleep(2000);
-      });
-
-   private void UploadAzureArtifact(string containerFolder, string artifactName, string fileName)
-   {
-      // ##vso[artifact.upload containerfolder=testresult;artifactname=uploadedresult;]c:\testresult.trx
-      StringBuilder command = new StringBuilder("##vso[artifact.upload containerfolder=");
-      command.Append(containerFolder);
-      command.Append(';');
-      if (!String.IsNullOrEmpty(artifactName))
-      {
-         command.Append("artifactname=");
-         command.Append(artifactName);
-         command.Append(';');
-      }
-
-      command.Append("]");
-      if (!String.IsNullOrEmpty(fileName))
-         command.Append(fileName);
-
-      Console.WriteLine(command.ToString());
-   }
-
-   Target DistBuild => _ => _
-      .DependsOn(Pack, UploadArtifacts);
 
 }
