@@ -17,6 +17,8 @@ jobs:
                --package-parameters "--add Microsoft.NET.Sdk --add Microsoft.VisualStudio.Workload.VCTools --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --includeRecommended --quiet" `
                -y --ignore-package-exit-codes=3010
             Write-Host "VS 2026 Build Tools installation completed" 
+            Invoke-WebRequest -Uri 'https://dot.net/v1/dotnet-install.ps1' -UseBasicParsing -OutFile "$env:temp\dotnet-install.ps1"
+               & $env:temp\dotnet-install.ps1 -Architecture x64 -Version '10.0.100' -InstallDir "$env:ProgramFiles\dotnet"
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v3
         with:
