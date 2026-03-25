@@ -24,6 +24,7 @@ using Nuke.Common.CI.AzurePipelines;
 using System.Threading;
 using System.Text;
 
+using Nuke.Common.CI.GitHubActions;
 using Nuke.Common.Tools.DocFX;
 
 using Serilog.Core;
@@ -33,6 +34,11 @@ using static Nuke.Common.IO.PathConstruction;
 
 [UnsetVisualStudioEnvironmentVariables]
 [MSBuildVerbosityMapping]
+[GitHubActions(
+   "continuous",
+   GitHubActionsImage.WindowsLatest,
+   On = new[] { GitHubActionsTrigger.Push },
+   InvokedTargets = new[] { nameof(Push) })]
 class AlphaVssBuild : NukeBuild
 {
    public static int Main() => Execute<AlphaVssBuild>(x => x.Compile);
