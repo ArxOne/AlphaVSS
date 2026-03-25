@@ -14,7 +14,7 @@ jobs:
         run: |
             Write-Host "Installing VS 2026 Build Tools..."
             choco install visualstudio2026buildtools `
-               --package-parameters " --add Microsoft.VisualStudio.Workload.VCTools --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --includeRecommended --quiet" `
+               --package-parameters " --allWorkloads --includeOptional --add Microsoft.VisualStudio.Workload.VCTools --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 --includeRecommended --quiet" `
                -y --ignore-package-exit-codes=3010
             Write-Host "VS 2026 Build Tools installation completed" 
             Invoke-WebRequest -Uri 'https://dot.net/v1/dotnet-install.ps1' -UseBasicParsing -OutFile "$env:temp\dotnet-install.ps1"
