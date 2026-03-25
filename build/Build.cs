@@ -34,11 +34,6 @@ using static Nuke.Common.IO.PathConstruction;
 
 [UnsetVisualStudioEnvironmentVariables]
 [MSBuildVerbosityMapping]
-[GitHubActions(
-   "continuous",
-   GitHubActionsImage.WindowsLatest,
-   On = new[] { GitHubActionsTrigger.Push },
-   InvokedTargets = new[] { nameof(Push) })]
 class AlphaVssBuild : NukeBuild
 {
    public static int Main() => Execute<AlphaVssBuild>(x => x.Compile);
