@@ -74,7 +74,7 @@ class AlphaVssBuild : NukeBuild
             .SetFormat(VSWhereFormat.value)
       ).Output.LastOrDefault().Text;
 
-      MSBuildToolPath = Path.Combine(result, "MSBuild\\Current\\Bin\\MSBuild.exe");
+      MSBuildToolPath = Path.Combine(result ?? "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools", "MSBuild\\Current\\Bin\\MSBuild.exe");
       if (IsServerBuild)
       {
          AzurePipelines.Instance.UpdateBuildNumber($"AlphaVSS-{GitVersion.SemVer}")
