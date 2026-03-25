@@ -39,7 +39,7 @@ jobs:
           vs-version: '[18.0,)'
       - name: 'MSBuild found path'
         run: |
-            C:\Users\runneradmin\.nuget\packages\vswhere\3.1.7\tools\vswhere.exe -version [18.0,) -latest -prerelease -utf8 -property InstallationPath -format value
+            C:\Users\runneradmin\.nuget\packages\vswhere\3.1.7\tools\vswhere.exe -version "[18.0,)" -latest -prerelease -utf8 -property InstallationPath -format value
       - name: 'Cache: .nuke/temp, ~/.nuget/packages'
         uses: actions/cache@v4
         with:
