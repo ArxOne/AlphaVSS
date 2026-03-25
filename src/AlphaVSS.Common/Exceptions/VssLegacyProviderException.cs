@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Exception indicating that this version of the hardware provider does not support this operation.
@@ -16,7 +16,7 @@ namespace Alphaleonis.Win32.Vss
       /// Initializes a new instance of the <see cref="VssLegacyProviderException"/> class.
       /// </summary>
       public VssLegacyProviderException() 
-         : base(Alphaleonis.Win32.Vss.Resources.LocalizedStrings.ThisVersionOfTheHardwareProviderDoesNotSupportThisOperation)
+         : base(ArxOne.Win32.Vss.Resources.LocalizedStrings.ThisVersionOfTheHardwareProviderDoesNotSupportThisOperation)
       { 
       }
 

@@ -1,7 +1,7 @@
 
 #pragma once
 
-namespace Alphaleonis {
+namespace ArxOne {
    namespace Win32 {
       namespace Vss
       {

@@ -1,6 +1,6 @@
 
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// The <see cref="IVssSnapshotManagement"/> interface provides a method that returns an interface to further configure a shadow copy provider.

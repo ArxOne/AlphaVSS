@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Exception indicating that the the shadow copy contains only a subset of the volumes needed by the writer to correctly back up the application component.
@@ -16,7 +16,7 @@ namespace Alphaleonis.Win32.Vss
       /// Initializes a new instance of the <see cref="VssInconsistentSnapshotWriterException"/> class.
       /// </summary>
       public VssInconsistentSnapshotWriterException()
-         : base(Alphaleonis.Win32.Vss.Resources.LocalizedStrings.VssInconsistentSnapshotWriterExceptionMessage)
+         : base(ArxOne.Win32.Vss.Resources.LocalizedStrings.VssInconsistentSnapshotWriterExceptionMessage)
       {
       }
 

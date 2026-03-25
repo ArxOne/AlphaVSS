@@ -2,7 +2,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Exception indicating that the requested method is not supported on the current operating system, or the loaded
@@ -15,7 +15,7 @@ namespace Alphaleonis.Win32.Vss
       /// Initializes a new instance of the <see cref="UnsupportedOperatingSystemException"/> class.
       /// </summary>
       public UnsupportedOperatingSystemException()
-         : base(Alphaleonis.Win32.Vss.Resources.LocalizedStrings.UnsupportedOperatingSystemExceptionMessage)
+         : base(ArxOne.Win32.Vss.Resources.LocalizedStrings.UnsupportedOperatingSystemExceptionMessage)
       {
       }
 

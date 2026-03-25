@@ -1,6 +1,6 @@
 
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>This enumeration is used by a writer at backup time to specify through its Writer Metadata Document the default file restore 
    /// method to be used with all the files in all the components it manages.</summary>

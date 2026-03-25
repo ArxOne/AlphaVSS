@@ -1,6 +1,6 @@
 
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Defines the set of volume shadow copy protection levels.

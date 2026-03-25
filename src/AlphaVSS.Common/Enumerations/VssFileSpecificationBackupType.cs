@@ -1,6 +1,6 @@
 ﻿
 using System;
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// 	<para>

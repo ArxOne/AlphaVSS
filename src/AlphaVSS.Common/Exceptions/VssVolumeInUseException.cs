@@ -2,7 +2,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    ///     Exception indicating that the volume was in use and could not be locked.

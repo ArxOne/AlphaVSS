@@ -2,7 +2,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Exception class indicating that an unexpected error occured. The error code is logged in the error log file.
@@ -14,7 +14,7 @@ namespace Alphaleonis.Win32.Vss
       /// Initializes a new instance of the <see cref="VssException"/> class.
       /// </summary>
       public VssUnexpectedErrorException()
-         : base(Alphaleonis.Win32.Vss.Resources.LocalizedStrings.AnUnexpectedErrorOccuredTheErrorCodeIsLogg)
+         : base(ArxOne.Win32.Vss.Resources.LocalizedStrings.AnUnexpectedErrorOccuredTheErrorCodeIsLogg)
       {
       }
 

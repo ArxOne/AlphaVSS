@@ -1,6 +1,6 @@
 ﻿
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>The <see cref="VssSourceType"/> enumeration specifies the type of data that a writer manages.</summary>
    public enum VssSourceType

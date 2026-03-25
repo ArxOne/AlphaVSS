@@ -1,6 +1,6 @@
 
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// The <see cref="VssSnapshotContext" /> enumeration enables a requester using <see cref="IVssBackupComponents.SetContext(VssSnapshotContext)" /> to specify how a 

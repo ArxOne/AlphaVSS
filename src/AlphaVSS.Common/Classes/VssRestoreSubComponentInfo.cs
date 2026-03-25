@@ -1,7 +1,7 @@
 
 
 using System;
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    ///		Represents information about a Subcomponent associated with a given component.

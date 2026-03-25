@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 using System.Runtime.Loader;
 #endif
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Class that provides instances of <see cref="IVssFactory"/> which in turn is used as the entry point to accessing the various VSS functions.
@@ -53,7 +53,7 @@ namespace Alphaleonis.Win32.Vss
       /// <exception cref="UnsupportedOperatingSystemException">This exception is thrown if running as a 32-bit process on a 64-bit operating system.</exception>
       public IVssFactory GetVssFactory()
       {         
-         return (IVssFactory)m_assembly.Value.CreateInstance("Alphaleonis.Win32.Vss.VssFactory");
+         return (IVssFactory)m_assembly.Value.CreateInstance("ArxOne.Win32.Vss.VssFactory");
       }
 
       private Assembly LoadAssembly()

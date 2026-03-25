@@ -1,6 +1,6 @@
 
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// The <see cref="VssComponentType"/> enumeration is used by both the requester and the writer to specify the type of component being used 

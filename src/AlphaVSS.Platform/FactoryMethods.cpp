@@ -3,7 +3,7 @@
 
 #include <VsMgmt.h>
 
-namespace Alphaleonis {
+namespace ArxOne {
    namespace Win32 {
       namespace Vss
       {

@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// 	<para>

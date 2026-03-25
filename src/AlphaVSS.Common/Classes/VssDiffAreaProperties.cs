@@ -1,7 +1,7 @@
 
 using System;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// The <see cref="VssDiffAreaProperties"/> structure describes associations between volumes containing the original file data 

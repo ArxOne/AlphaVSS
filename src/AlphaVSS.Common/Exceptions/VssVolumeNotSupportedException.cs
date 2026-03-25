@@ -2,7 +2,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    ///     Exception thrown to indicate that the volume does not support the requested operation, or that no provider supports it.

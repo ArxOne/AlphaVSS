@@ -13,7 +13,7 @@
       - Added support </releaseNotes>
       <copyright>Copyright © Peter Palotas</copyright>      
       <tags>Win32, VSS</tags>
-      <repository type="git" url="https://github.com/alphaleonis/AlphaVSS.git" branch="$branch$" commit="$commit$" />
+      <repository type="git" url="https://github.com/ArxOne/AlphaVSS.git" branch="$branch$" commit="$commit$" />
       <dependencies>
          <group targetFramework="net8.0" >
             <dependency id="AlphaVSS.Native.NetCore"  version="[$version$]" />

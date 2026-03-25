@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Exception indicating that the writer status is not available for one or more writers. 
@@ -17,7 +17,7 @@ namespace Alphaleonis.Win32.Vss
       /// Initializes a new instance of the <see cref="VssWriterStatusNotAvailableException"/> class.
       /// </summary>
       public VssWriterStatusNotAvailableException()
-         : base(Alphaleonis.Win32.Vss.Resources.LocalizedStrings.VssWriterStatusNotAvailableExceptionMessage)
+         : base(ArxOne.Win32.Vss.Resources.LocalizedStrings.VssWriterStatusNotAvailableExceptionMessage)
       {
       }
 

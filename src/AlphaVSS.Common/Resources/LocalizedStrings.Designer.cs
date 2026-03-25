@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Alphaleonis.Win32.Vss.Resources {
+namespace ArxOne.Win32.Vss.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Alphaleonis.Win32.Vss.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Alphaleonis.Win32.Vss.Resources.LocalizedStrings", typeof(LocalizedStrings).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ArxOne.Win32.Vss.Resources.LocalizedStrings", typeof(LocalizedStrings).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

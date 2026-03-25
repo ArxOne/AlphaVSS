@@ -1,5 +1,5 @@
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    ///     The <see cref="VssFileRestoreStatus" /> enumeration defines the set of statuses of a file restore operation performed on 

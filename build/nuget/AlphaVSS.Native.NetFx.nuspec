@@ -12,7 +12,7 @@
 Do not install this package manually, it will be added as a prerequisite by the AlphaVSS package when required.</description>      
       <copyright>Copyright © Peter Palotas</copyright>      
       <tags>Win32, VSS</tags>
-      <repository type="git" url="https://github.com/alphaleonis/AlphaVSS.git" branch="$branch$" commit="$commit$" />
+      <repository type="git" url="https://github.com/ArxOne/AlphaVSS.git" branch="$branch$" commit="$commit$" />
       <dependencies>
          <group targetFramework="net8.0" />
       </dependencies>

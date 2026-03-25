@@ -3,7 +3,7 @@
 
 #include "VssWriterComponents.h"
 
-namespace Alphaleonis { namespace Win32 { namespace Vss
+namespace ArxOne { namespace Win32 { namespace Vss
 {
 	VssWriterComponents^ VssWriterComponents::Adopt(IVssWriterComponentsExt *vssWriterComponents)
 	{

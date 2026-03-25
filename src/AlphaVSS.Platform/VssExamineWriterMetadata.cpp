@@ -3,7 +3,7 @@
 
 #include "VssExamineWriterMetadata.h"
 
-namespace Alphaleonis { namespace Win32 { namespace Vss
+namespace ArxOne { namespace Win32 { namespace Vss
 {
    IVssExamineWriterMetadata^ VssExamineWriterMetadata::Adopt(::IVssExamineWriterMetadata *ewm)
    {

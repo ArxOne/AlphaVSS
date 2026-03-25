@@ -1,6 +1,6 @@
 
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>The <see cref="VssWriterState"/> enumeration indicates the current state of the writer.</summary>
    /// <remarks>A requester determines the state of a writer through <see cref="IVssBackupComponents.WriterStatus"/>.</remarks>

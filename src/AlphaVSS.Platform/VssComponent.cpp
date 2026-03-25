@@ -4,7 +4,7 @@
 #include "VssComponent.h"
 
 
-namespace Alphaleonis { namespace Win32 { namespace Vss
+namespace ArxOne { namespace Win32 { namespace Vss
 {
    VssComponent^ VssComponent::Adopt(::IVssComponent *vssWriterComponents)
    {

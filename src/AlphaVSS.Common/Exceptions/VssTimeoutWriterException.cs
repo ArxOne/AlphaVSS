@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Exception indicating that the writer operation failed because of a time-out between the Freeze and Thaw events. The recommended way to 
@@ -17,7 +17,7 @@ namespace Alphaleonis.Win32.Vss
       /// Initializes a new instance of the <see cref="VssTimeoutWriterException"/> class.
       /// </summary>
       public VssTimeoutWriterException()
-         : base(Alphaleonis.Win32.Vss.Resources.LocalizedStrings.VssTimeoutWriterExceptionMessage)
+         : base(ArxOne.Win32.Vss.Resources.LocalizedStrings.VssTimeoutWriterExceptionMessage)
       {
       }
 

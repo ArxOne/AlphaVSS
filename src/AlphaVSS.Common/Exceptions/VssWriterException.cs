@@ -2,7 +2,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Base class for exceptions thrown to indicate errors reported by VSS writers.

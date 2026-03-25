@@ -3,7 +3,7 @@
 #include "pch.h"
 #include "VssAsyncResult.h"
 
-namespace Alphaleonis { namespace Win32 { namespace Vss
+namespace ArxOne { namespace Win32 { namespace Vss
 {
    VssAsyncResult::VssAsyncResult(::IVssAsync *vssAsync, AsyncCallback^ userCallback, Object^ asyncState)
       : m_isComplete(0), m_asyncCallback(userCallback), m_asyncState(asyncState), m_asyncWaitHandle(nullptr), m_vssAsync(vssAsync), m_exception(nullptr)

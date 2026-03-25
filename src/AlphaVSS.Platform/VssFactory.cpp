@@ -7,7 +7,7 @@
 #include "VssBackupComponents.h"
 #include "VssSnapshotManagement.h"
 
-namespace Alphaleonis { namespace Win32 { namespace Vss
+namespace ArxOne { namespace Win32 { namespace Vss
 {
 	VssFactory::VssFactory()
 	{

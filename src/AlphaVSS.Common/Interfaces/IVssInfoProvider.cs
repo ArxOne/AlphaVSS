@@ -1,7 +1,7 @@
 
 using System;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Provides access to global methods of the Win32 VSS API that allow querying for specific information.

@@ -8,7 +8,7 @@
    <Import Project="..\AlphaVSS.props" />
   <PropertyGroup>
     <Title>AlphaVSS.Common</Title>
-    <Description>Alphaleonis Windows Volume Shadow Copy .NET Common Library</Description>
+    <Description>ArxOne Windows Volume Shadow Copy .NET Common Library</Description>
     <Copyright>Copyright (C) Peter Palotas</Copyright>
     <Authors>Peter Palotas</Authors>
     <Product>AlphaVSS</Product>
@@ -21,7 +21,7 @@
     <ApplicationIcon />
     <Win32Resource />
     <NuGetAuditMode>all</NuGetAuditMode>
-    <RootNamespace>Alphaleonis.Win32.Vss</RootNamespace>
+    <RootNamespace>ArxOne.Win32.Vss</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

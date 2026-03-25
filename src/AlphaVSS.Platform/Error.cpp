@@ -1,7 +1,7 @@
 
 #include "pch.h"
 
-namespace Alphaleonis { namespace Win32 { namespace Vss
+namespace ArxOne { namespace Win32 { namespace Vss
 {
 
    void ThrowException(HRESULT errorCode)

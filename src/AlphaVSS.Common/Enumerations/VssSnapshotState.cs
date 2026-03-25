@@ -1,6 +1,6 @@
 
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>The <see cref="VssSnapshotState"/> enumeration is returned by a provider to specify the state of a given shadow copy operation.</summary>
    public enum VssSnapshotState

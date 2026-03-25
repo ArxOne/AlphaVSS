@@ -10,7 +10,7 @@ using namespace System::Collections::Generic;
 using namespace System::Threading::Tasks;
 using namespace System::Threading;
 
-namespace Alphaleonis { namespace Win32 { namespace Vss
+namespace ArxOne { namespace Win32 { namespace Vss
 {
    private ref class VssBackupComponents : IDisposable, IVssBackupComponents, MarshalByRefObject
    {

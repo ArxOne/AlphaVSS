@@ -2,7 +2,7 @@
 #include "pch.h"
 #include "VssListAdapter.h"
 
-namespace Alphaleonis { namespace Win32 { namespace Vss
+namespace ArxOne { namespace Win32 { namespace Vss
 {
 	generic<typename T>
 	void VssListAdapter<T>::Add(T item)

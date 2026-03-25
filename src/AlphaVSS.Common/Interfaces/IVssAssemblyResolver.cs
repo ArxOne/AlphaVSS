@@ -2,7 +2,7 @@
 using System;
 using System.Reflection;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// An interface providing methods for <see cref="IVssFactoryProvider"/> to load the platform specific assembly required for instantiating

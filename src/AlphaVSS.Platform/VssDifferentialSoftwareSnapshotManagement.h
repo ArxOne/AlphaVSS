@@ -8,7 +8,7 @@
 
 using namespace System::Collections::Generic;
 
-namespace Alphaleonis { namespace Win32 { namespace Vss
+namespace ArxOne { namespace Win32 { namespace Vss
 {
    public ref class VssDifferentialSoftwareSnapshotManagement : IVssDifferentialSoftwareSnapshotManagement, MarshalByRefObject
    {

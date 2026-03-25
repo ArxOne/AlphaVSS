@@ -1,5 +1,5 @@
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    ///     The <see cref="VssBackupType"/> enumeration indicates the type of backup to be performed using VSS writer/requester 

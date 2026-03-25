@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Exception indicating that the writer operation failed because of an error that might recur if another shadow copy is created. 
@@ -17,7 +17,7 @@ namespace Alphaleonis.Win32.Vss
       /// Initializes a new instance of the <see cref="VssNonRetryableWriterException"/> class.
       /// </summary>
       public VssNonRetryableWriterException()
-         : base(Alphaleonis.Win32.Vss.Resources.LocalizedStrings.VssNonRetryableWriterExceptionMessage)
+         : base(ArxOne.Win32.Vss.Resources.LocalizedStrings.VssNonRetryableWriterExceptionMessage)
       {
       }
 

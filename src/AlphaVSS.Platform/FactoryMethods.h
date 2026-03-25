@@ -6,7 +6,7 @@
 
 #include <VsMgmt.h>
 
-namespace Alphaleonis { namespace Win32 { namespace Vss
+namespace ArxOne { namespace Win32 { namespace Vss
 {
    VssWMFileDescriptor^ CreateVssWMFileDescriptor(IVssWMFiledesc *vssWMFiledesc);
    VssProviderProperties^ CreateVssProviderProperties(VSS_PROVIDER_PROP *pProp);
