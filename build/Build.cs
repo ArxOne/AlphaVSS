@@ -52,7 +52,7 @@ class AlphaVssBuild : NukeBuild
    [GitRepository] readonly GitRepository GitRepository;
    [GitVersion] readonly GitVersion GitVersion;
 
-   string RequiredMSBuildVersion = "[18.4.0,)";
+   string RequiredMSBuildVersion = "[18.0,)";
 
    AbsolutePath SourceDirectory => RootDirectory / "src";
    AbsolutePath ArtifactsDirectory => RootDirectory / "artifacts";
