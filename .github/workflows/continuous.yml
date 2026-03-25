@@ -24,6 +24,8 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v6
+        with:
+         fetch-depth: 0
       - name: Install latest build
         run: |
             Write-Host "Installing VS 2026 Build Tools..."
