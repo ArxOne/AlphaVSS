@@ -26,6 +26,8 @@ jobs:
       - uses: actions/checkout@v6
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v3
+        with:
+          vs-version: '[18.4.0,)'
       - name: 'Cache: .nuke/temp, ~/.nuget/packages'
         uses: actions/cache@v4
         with:
