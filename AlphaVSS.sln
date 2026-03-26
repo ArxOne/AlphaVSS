@@ -63,7 +63,7 @@ Global
 		{3A977469-6361-469C-B180-5180CD9A15B4}.net8d|x86.ActiveCfg = net8d|Win32
 		{3A977469-6361-469C-B180-5180CD9A15B4}.net8d|x86.Build.0 = net8d|Win32
 		{4056BD12-5FA8-4D2E-274A-7E85E858A5FC}.NET8|ARM64.ActiveCfg = net8d|Any CPU
-		{4056BD12-5FA8-4D2E-274A-7E85E858A5FC}.NET8|x64.ActiveCfg = net8d|Any CPU
+		{4056BD12-5FA8-4D2E-274A-7E85E858A5FC}.NET8|x64.ActiveCfg = Release|Any CPU
 		{4056BD12-5FA8-4D2E-274A-7E85E858A5FC}.NET8|x86.ActiveCfg = net8d|Any CPU
 		{4056BD12-5FA8-4D2E-274A-7E85E858A5FC}.net8d|ARM64.ActiveCfg = Release|Any CPU
 		{4056BD12-5FA8-4D2E-274A-7E85E858A5FC}.net8d|x64.ActiveCfg = net8d|Any CPU
@@ -73,7 +73,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {ECF0CB01-39FE-41E9-A5AE-BD7D5C76530A}
 		VisualSVNWorkingCopyRoot = ..\..
+		SolutionGuid = {ECF0CB01-39FE-41E9-A5AE-BD7D5C76530A}
 	EndGlobalSection
 EndGlobal

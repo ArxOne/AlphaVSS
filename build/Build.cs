@@ -86,9 +86,9 @@ class AlphaVssBuild : NukeBuild
        .DependsOn(Restore)
        .Executes(() =>
        {
-          BuildProject("AlphaVSS.Common", Configuration == Configuration.Debug ? "net8d" : "net8", "AnyCPU");
-          
           BuildPlatformProject("net8");
+          
+          BuildProject("AlphaVSS.Common", Configuration == Configuration.Debug ? "net8d" : "net8", "AnyCPU");
 
 
           void BuildPlatformProject(string projectConfigurationPrefix)
