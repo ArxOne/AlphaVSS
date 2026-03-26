@@ -44,8 +44,7 @@ class AlphaVssBuild : NukeBuild
    [Parameter]
    readonly string FeedUri;
 
-   [Parameter]
-   readonly string NuGetApiKey = "VSTS";
+   [Parameter][Secret] readonly string NuGetApiKey;
 
    [Solution] readonly Solution Solution;
    [GitRepository] readonly GitRepository GitRepository;
@@ -162,14 +161,13 @@ class AlphaVssBuild : NukeBuild
 
    Target Push => _ => _
       .DependsOn(Pack)
-      .Requires(() => FeedUri)
+      .Requires(() => NuGetApiKey)
       .Executes(() =>
       {
          foreach (var file in ArtifactsDirectory.GlobFiles("*.nupkg"))
          {
             NuGetPush(s => s
                .SetApiKey(NuGetApiKey)
-               .SetSource(FeedUri)
                .SetTargetPath(file));
          }
       });

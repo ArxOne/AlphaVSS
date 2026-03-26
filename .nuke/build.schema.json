@@ -27,11 +27,9 @@
         "Build",
         "Clean",
         "Compile",
-        "DistBuild",
         "Pack",
         "Push",
-        "Restore",
-        "UploadArtifacts"
+        "Restore"
       ]
     },
     "Verbosity": {
@@ -117,7 +115,8 @@
           "type": "string"
         },
         "NuGetApiKey": {
-          "type": "string"
+          "type": "string",
+          "default": "Secrets must be entered via 'nuke :secrets [profile]'"
         },
         "Solution": {
           "type": "string",
