@@ -19,7 +19,7 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj', '**/Directory.Packages.props') }}
       - name: 'Run: Push'
         shell: pwsh
-        run: ./build.ps1 Push --FeedUri ${{ env.FEED_URI }}
+        run: ./build.ps1 Push --FeedUri $FEED_URI
         env:
          NuGetApiKey: ${{ secrets.NUGET_API_KEY }}
       - name: Archive build artifacts
