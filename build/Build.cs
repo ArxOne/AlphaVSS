@@ -1,36 +1,21 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Newtonsoft.Json;
 using Nuke.Common;
 using Nuke.Common.Execution;
 using Nuke.Common.Git;
 using Nuke.Common.IO;
 using Nuke.Common.ProjectModel;
 using Nuke.Common.Tooling;
-using Nuke.Common.Tools.DotNet;
 using Nuke.Common.Tools.GitVersion;
 using Nuke.Common.Tools.MSBuild;
 using Nuke.Common.Tools.VSWhere;
 using Nuke.Common.Tools.NuGet;
-using Nuke.Common.Utilities;
 using Nuke.Common.Utilities.Collections;
-using static Nuke.Common.EnvironmentInfo;
 using static Nuke.Common.Tools.NuGet.NuGetTasks;
-using static Nuke.Common.IO.PathConstruction;
 using static Nuke.Common.Tools.MSBuild.MSBuildTasks;
-using System.Threading;
-using System.Text;
-
-using Nuke.Common.CI.GitHubActions;
-using Nuke.Common.Tools.DocFX;
 
 using Serilog;
-using Serilog.Core;
-
-using static Nuke.Common.EnvironmentInfo;
-using static Nuke.Common.IO.PathConstruction;
 
 [UnsetVisualStudioEnvironmentVariables]
 [MSBuildVerbosityMapping]
@@ -161,7 +146,7 @@ class AlphaVssBuild : NukeBuild
       .DependsOn(Pack)
       .Executes(() =>
       {
-         var feedUri = Environment.GetEnvironmentVariable("FEED_URI");
+         var feedUri = Environment.GetEnvironmentVariable("FeedUri");
          Log.Information($"Feed Uri: {feedUri}");
          foreach (var file in ArtifactsDirectory.GlobFiles("*.nupkg"))
          {
