@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
    <metadata>
-      <id>ArxAlphaVSS.Native.NetCore</id>
+      <id>ArxOne.AlphaVSS.Native.NetCore</id>
       <version>1.0.0</version>
       <title>AlphaVSS.Native.NetCore</title>
       <authors>ArxOne, BenoitRoux</authors>

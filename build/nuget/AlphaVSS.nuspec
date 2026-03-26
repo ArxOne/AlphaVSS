@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
    <metadata>
-      <id>ArxAlphaVSS</id>
+      <id>ArxOne.AlphaVSS</id>
       <version>1.0.0</version>
       <title>AlphaVSS</title>
       <authors>ArxOne</authors>
@@ -16,7 +16,7 @@
       <repository type="git" url="https://github.com/ArxOne/AlphaVSS.git" branch="$branch$" commit="$commit$" />
       <dependencies>
          <group targetFramework="net8.0" >
-            <dependency id="ArxAlphaVSS.Native.NetCore"  version="[$version$]" />
+            <dependency id="ArxOne.AlphaVSS.Native.NetCore"  version="[$version$]" />
          </group>
       </dependencies>
    </metadata>   
