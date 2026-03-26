@@ -96,7 +96,6 @@ class AlphaVssBuild : NukeBuild
              projectConfigurationPrefix = Configuration == Configuration.Debug ? $"{projectConfigurationPrefix}d" : projectConfigurationPrefix;
              BuildProject("AlphaVSS.Platform", projectConfigurationPrefix, "Win32");
              BuildProject("AlphaVSS.Platform", projectConfigurationPrefix, "x64");
-             BuildProject("AlphaVSS.Platform", projectConfigurationPrefix, "arm64");
           }
 
           void BuildProject(string projectName, string configuration, string platform)

@@ -6,7 +6,6 @@
    <PropertyGroup Label="Custom">
       <PlatformName Condition="'$(Platform)' == 'Win32'">x86</PlatformName>
       <PlatformName Condition="'$(Platform)' == 'x64'">x64</PlatformName>
-      <PlatformName Condition="'$(Platform)' == 'ARM64'">arm64</PlatformName>
       <VersionDefinitions>ALPHAVSS_VERSION_MAJOR=$(AlphaVss_VersionMajor);ALPHAVSS_VERSION_MINOR=$(AlphaVss_VersionMinor);ALPHAVSS_VERSION_PATCH=$(AlphaVss_VersionPatch);ALPHAVSS_COPYRIGHT=$(AlphaVss_Copyright);ALPHAVSS_DESCRIPTION=$(AlphaVss_Description);ALPHAVSS_ASSEMBLYVERSION=$(AssemblyVersion);ALPHAVSS_FILEVERSION=$(FileVersion);ALPHAVSS_INFORMATIONALVERSION=$(InformationalVersion)</VersionDefinitions>
    </PropertyGroup>
    <PropertyGroup Label="Output">

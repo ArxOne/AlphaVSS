@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="net8d|ARM64">
-      <Configuration>net8d</Configuration>
-      <Platform>ARM64</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="net8d|Win32">
       <Configuration>net8d</Configuration>
       <Platform>Win32</Platform>
@@ -12,10 +8,6 @@
     <ProjectConfiguration Include="net8d|x64">
       <Configuration>net8d</Configuration>
       <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="net8|ARM64">
-      <Configuration>net8</Configuration>
-      <Platform>ARM64</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="net8|Win32">
       <Configuration>net8</Configuration>
