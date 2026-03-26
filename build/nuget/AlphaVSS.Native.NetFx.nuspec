@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
    <metadata>
-      <id>AlphaVSS.Native.NetFx</id>
+      <id>ArxAlphaVSS.Native.NetFx</id>
       <version>1.0.0</version>
       <title>AlphaVSS.Native.NetFx</title>
-      <authors>alphaleonis</authors>
+      <authors>ArxOne</authors>
       <license type="expression">Apache-2.0</license>
-      <projectUrl>https://alphavss.alphaleonis.com/</projectUrl>
+      <projectUrl>https://github.com/ArxOne/AlphaVSS/</projectUrl>
       <requireLicenseAcceptance>true</requireLicenseAcceptance>
       <description>A package containing the native binaries for AlphaVSS targetting .NET Framework.
 Do not install this package manually, it will be added as a prerequisite by the AlphaVSS package when required.</description>      
