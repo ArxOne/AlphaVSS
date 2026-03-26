@@ -164,7 +164,7 @@ class AlphaVssBuild : NukeBuild
       .DependsOn(Pack)
       .Executes(() =>
       {
-         Log.Information("Feed Uri: {}", FeedUri);
+         Log.Information($"Feed Uri: {FeedUri}");
          foreach (var file in ArtifactsDirectory.GlobFiles("*.nupkg"))
          {
             NuGetPush(s => s
