@@ -43,7 +43,7 @@ class AlphaVssBuild : NukeBuild
    readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
 
    [Parameter]
-   readonly string FeedUri = Environment.GetEnvironmentVariable("FeedUri");
+   readonly string FeedUri = Environment.GetEnvironmentVariable("FEED_URI");
 
    [Parameter][Secret] readonly string NuGetApiKey;
 
