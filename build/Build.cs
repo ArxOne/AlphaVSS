@@ -26,6 +26,7 @@ using System.Text;
 using Nuke.Common.CI.GitHubActions;
 using Nuke.Common.Tools.DocFX;
 
+using Serilog;
 using Serilog.Core;
 
 using static Nuke.Common.EnvironmentInfo;
@@ -163,6 +164,7 @@ class AlphaVssBuild : NukeBuild
       .DependsOn(Pack)
       .Executes(() =>
       {
+         Log.Information("Feed Uri: {}", FeedUri);
          foreach (var file in ArtifactsDirectory.GlobFiles("*.nupkg"))
          {
             NuGetPush(s => s
