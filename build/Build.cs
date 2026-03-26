@@ -27,6 +27,9 @@ class AlphaVssBuild : NukeBuild
    [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
    readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
 
+   [Parameter]
+   readonly string FeedUri;
+
    [Parameter][Secret] readonly string NuGetApiKey;
 
    [Solution] readonly Solution Solution;
@@ -144,15 +147,15 @@ class AlphaVssBuild : NukeBuild
 
    Target Push => _ => _
       .DependsOn(Pack)
+      .Requires(() => FeedUri)
       .Executes(() =>
       {
-         var feedUri = Environment.GetEnvironmentVariable("FeedUri");
-         Log.Information($"Feed Uri: {feedUri}");
+         Log.Information($"Feed Uri: {FeedUri}");
          foreach (var file in ArtifactsDirectory.GlobFiles("*.nupkg"))
          {
             NuGetPush(s => s
                .SetApiKey(NuGetApiKey)
-               .SetSource(feedUri)
+               .SetSource(FeedUri)
                .SetTargetPath(file));
          }
       });
