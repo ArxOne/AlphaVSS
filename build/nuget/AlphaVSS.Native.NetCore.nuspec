@@ -26,7 +26,5 @@ Do not install this package manually, it will be added as a prerequisite by the 
       <file src="..\..\artifacts\net8.0\x86\Ijwhost.dll" target="runtimes\win-x86\native" />
       <file src="..\..\artifacts\net8.0\x64\AlphaVSS.x64.dll" target="runtimes\win-x64\native" />
       <file src="..\..\artifacts\net8.0\x64\Ijwhost.dll" target="runtimes\win-x64\native" />
-      <file src="..\..\artifacts\net8.0\arm64\AlphaVSS.arm64.dll" target="runtimes\win-arm64\native" />
-      <file src="..\..\artifacts\net8.0\arm64\Ijwhost.dll" target="runtimes\win-arm64\native" />
    </files>
 </package>

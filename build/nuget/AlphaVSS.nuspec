@@ -11,7 +11,7 @@
       <description>AlphaVSS is a .NET class library providing a managed API for the Windows Volume Shadow Copy Service also known as VSS.</description>
       <releaseNotes>- Added support for .NET 8.0
       - Added support </releaseNotes>
-      <copyright>Copyright © Peter Palotas</copyright>      
+      <copyright>Copyright © Peter Palotas</copyright>
       <tags>Win32, VSS</tags>
       <repository type="git" url="https://github.com/ArxOne/AlphaVSS.git" branch="$branch$" commit="$commit$" />
       <dependencies>
