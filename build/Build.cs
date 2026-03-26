@@ -162,12 +162,14 @@ class AlphaVssBuild : NukeBuild
    Target Push => _ => _
       .DependsOn(Pack)
       .Requires(() => NuGetApiKey)
+      .Requires(() => FeedUri)
       .Executes(() =>
       {
          foreach (var file in ArtifactsDirectory.GlobFiles("*.nupkg"))
          {
             NuGetPush(s => s
                .SetApiKey(NuGetApiKey)
+               .SetSource(FeedUri)
                .SetTargetPath(file));
          }
       });

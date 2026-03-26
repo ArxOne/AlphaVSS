@@ -17,11 +17,12 @@ jobs:
             .nuke/temp
             ~/.nuget/packages
           key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj', '**/Directory.Packages.props') }}
-      - name: 'Run: Push'
+      - name: 'Run: Pack'
         shell: pwsh
         run: ./build.ps1 Push
         env:
          NuGetApiKey: ${{ secrets.NUGET_API_KEY }}
+         FeedUri: ${{ env.FEED_URI }}
       - name: Archive build artifacts
         uses: actions/upload-artifact@v4
         with:
