@@ -4,9 +4,9 @@ name: continuous
 on: [push]
 
 jobs:
-  windows-latest:
-    name: windows-latest
-    runs-on: windows-latest
+  windows-2025-vs2026:
+    name: windows-2025-vs2026
+    runs-on: windows-2025-vs2026
     steps:
       - uses: actions/checkout@v6
         with:
