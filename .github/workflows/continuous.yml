@@ -11,9 +11,12 @@ jobs:
       - uses: actions/checkout@v6
         with:
             fetch-depth: 0
-      - uses: actions/setup-dotnet@v5
-        with:
-         dotnet-version: '3.1.32'
+      - name: 'Install dotnet 3.1'
+        shell: pwsh
+        run: |
+         (New-Object System.Net.WebClient).DownloadFile("https://dot.net/v1/dotnet-install.ps1", .\dotnet-install.ps1)
+         .\dotnet-install.ps1 -Version 3.1.32
+
       - name: 'Cache: .nuke/temp, ~/.nuget/packages'
         uses: actions/cache@v4
         with:
