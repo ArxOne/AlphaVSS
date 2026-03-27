@@ -3,6 +3,7 @@
    <PropertyGroup>
     <TargetFrameworks>net45;netcoreapp3.1</TargetFrameworks>
     <IsPackable>false</IsPackable>
+    <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
 
    <Import Project="..\AlphaVSS.props" />
