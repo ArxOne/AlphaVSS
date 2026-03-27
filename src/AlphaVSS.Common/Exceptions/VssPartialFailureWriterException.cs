@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Exception indicating the writer is reporting one or more component-level errors. 
@@ -17,7 +17,7 @@ namespace Alphaleonis.Win32.Vss
       /// Initializes a new instance of the <see cref="VssPartialFailureWriterException"/> class.
       /// </summary>
       public VssPartialFailureWriterException()
-         : base(Alphaleonis.Win32.Vss.Resources.LocalizedStrings.VssPartialFailureWriterExceptionMessage)
+         : base(ArxOne.Win32.Vss.Resources.LocalizedStrings.VssPartialFailureWriterExceptionMessage)
       {
       }
 

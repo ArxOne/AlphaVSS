@@ -1,7 +1,7 @@
 
 
 using System;
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// The <see cref="VssWMFileDescriptor"/> class is returned to a calling application by a number of query methods. 

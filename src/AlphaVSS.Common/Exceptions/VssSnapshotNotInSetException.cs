@@ -2,7 +2,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Exception thrown to indicate that the specified snapshot specifies a shadow copy that does not exist in the Backup Components Document.
@@ -14,7 +14,7 @@ namespace Alphaleonis.Win32.Vss
       /// Initializes a new instance of the <see cref="VssSnapshotNotInSetException"/> class.
       /// </summary>
       public VssSnapshotNotInSetException() 
-         : base(Alphaleonis.Win32.Vss.Resources.LocalizedStrings.VssSnapshotNotInSetExceptionMessage)
+         : base(ArxOne.Win32.Vss.Resources.LocalizedStrings.VssSnapshotNotInSetExceptionMessage)
       { 
       }
 

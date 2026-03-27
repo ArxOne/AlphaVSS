@@ -85,8 +85,8 @@ BEGIN
     BEGIN
         BLOCK "040904b0"
         BEGIN
-            VALUE "CompanyName", "Alphaleonis" "\0"
-            VALUE "FileDescription", "Alphaleonis Windows Volume Shadow Copy Service .NET Library"
+            VALUE "CompanyName", "ArxOne" "\0"
+            VALUE "FileDescription", "ArxOne Windows Volume Shadow Copy Service .NET Library"
             VALUE "FileVersion", ALPHAVSS_FILEVERSION_STR
             VALUE "InternalName", "AlphaVSS"
             VALUE "LegalCopyright", ALPHAVSS_COPYRIGHT_STR

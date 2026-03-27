@@ -1,7 +1,7 @@
 
 using System;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// <see cref="VssWMDependency"/> is used to determine the writer ID, logical path, and component name of components that must be restored or 

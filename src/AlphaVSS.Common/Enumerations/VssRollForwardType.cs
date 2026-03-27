@@ -1,6 +1,6 @@
 
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    ///     The <c>VssRollForwardType</c> enumeration is used by a requester to indicate the type of roll-forward operation it is about to perform.

@@ -1,5 +1,5 @@
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>The <see cref="VssWriterRestore"/> enumeration is used by a writer to indicate to a requester the 
    /// conditions under which it will handle events generated during a restore operation.</summary>

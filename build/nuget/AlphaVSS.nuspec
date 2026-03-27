@@ -4,22 +4,22 @@
       <id>AlphaVSS</id>
       <version>1.0.0</version>
       <title>AlphaVSS</title>
-      <authors>alphaleonis</authors>
+      <authors>ArxOne</authors>
       <license type="expression">Apache-2.0</license>
-      <projectUrl>https://alphavss.alphaleonis.com/</projectUrl>
+      <projectUrl>https://github.com/ArxOne/AlphaVSS</projectUrl>
       <requireLicenseAcceptance>true</requireLicenseAcceptance>
       <description>AlphaVSS is a .NET class library providing a managed API for the Windows Volume Shadow Copy Service also known as VSS.</description>
       <releaseNotes>- Added support for .NET Core 3.1.
 - Added TPL style async methods for asynchronous methods on IVssBackupComponents.</releaseNotes>
       <copyright>Copyright © Peter Palotas</copyright>      
       <tags>Win32, VSS</tags>
-      <repository type="git" url="https://github.com/alphaleonis/AlphaVSS.git" branch="$branch$" commit="$commit$" />
+      <repository type="git" url="https://github.com/ArxOne/AlphaVSS.git" branch="$branch$" commit="$commit$" />
       <dependencies>
          <group targetFramework="net45">
-            <dependency id="AlphaVSS.Native.NetFx" version="[$version$]" />
+            <dependency id="ArxOne.AlphaVSS.Native.NetFx" version="[$version$]" />
          </group>
          <group targetFramework="netcoreapp3.1" >
-            <dependency id="AlphaVSS.Native.NetCore"  version="[$version$]" />
+            <dependency id="ArxOne.AlphaVSS.Native.NetCore"  version="[$version$]" />
          </group>
       </dependencies>
    </metadata>   

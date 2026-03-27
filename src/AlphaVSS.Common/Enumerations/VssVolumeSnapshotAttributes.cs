@@ -1,6 +1,6 @@
 
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Allows additional attributes to be specified for a shadow copy. The context of a shadow copy (as set by the SetContext method in <see cref="IVssBackupComponents" /> method) 
@@ -77,7 +77,7 @@ namespace Alphaleonis.Win32.Vss
       /// <summary>
       /// <para>Indicates that a given provider is a hardware-based provider. </para>
       /// <para>This attribute is automatically set for hardware-based providers.</para>
-      /// <para>This enumeration value cannot be used to manually set the context (using the <see cref="IVssBackupComponents.SetContext(Alphaleonis.Win32.Vss.VssVolumeSnapshotAttributes)"/> method) 
+      /// <para>This enumeration value cannot be used to manually set the context (using the <see cref="IVssBackupComponents.SetContext(ArxOne.Win32.Vss.VssVolumeSnapshotAttributes)"/> method) 
       /// of a shadow copy by a bit mask (or bitwise OR) of this enumeration value and a valid shadow copy context value from 
       /// <see cref="VssSnapshotContext" />.</para>
       /// </summary>

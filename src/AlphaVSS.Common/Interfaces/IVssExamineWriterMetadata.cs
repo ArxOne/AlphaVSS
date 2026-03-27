@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    ///     A class that allows a requester to examine the metadata of a specific writer instance. This metadata may come from a 

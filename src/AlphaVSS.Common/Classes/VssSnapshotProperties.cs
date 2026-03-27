@@ -1,7 +1,7 @@
 
 using System;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    ///     The <see cref="VssSnapshotProperties"/> class contains the properties of a shadow copy or shadow copy set.

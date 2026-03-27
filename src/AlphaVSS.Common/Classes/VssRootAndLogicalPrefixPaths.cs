@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>Contains a normalized local volume path or UNC share path as returned by <see cref="IVssBackupComponents.GetRootAndLogicalPrefixPaths"/>.</summary>
    public sealed class VssRootAndLogicalPrefixPaths

@@ -1,6 +1,6 @@
 
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>The <see cref="VssRestoreType"/> enumeration is used by a requester to indicate the type of restore operation it is about to perform.</summary>
    /// <remarks>

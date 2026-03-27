@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    ///     <see cref="IVssWMComponent"/> is a class that allows access to component information stored in a Writer Metadata Document.

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Exception indicating that the writer ran out of memory or other system resources. 
@@ -17,7 +17,7 @@ namespace Alphaleonis.Win32.Vss
       /// Initializes a new instance of the <see cref="VssOutOfResourcesWriterException"/> class.
       /// </summary>
       public VssOutOfResourcesWriterException()
-         : base(Alphaleonis.Win32.Vss.Resources.LocalizedStrings.VssOutOfResourcesExceptionMessage)
+         : base(ArxOne.Win32.Vss.Resources.LocalizedStrings.VssOutOfResourcesExceptionMessage)
       {
       }
 

@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "VssAsyncTaskFactory.h"
 
-namespace Alphaleonis {
+namespace ArxOne {
    namespace Win32 {
       namespace Vss {
 

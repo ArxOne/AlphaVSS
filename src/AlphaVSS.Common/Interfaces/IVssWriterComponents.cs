@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// 	The <see cref="IVssWriterComponents"/> interface contains methods used to obtain and modify component information 

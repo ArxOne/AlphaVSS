@@ -4,7 +4,7 @@
 using namespace System;
 
 
-namespace Alphaleonis { namespace Win32 { namespace Vss
+namespace ArxOne { namespace Win32 { namespace Vss
 {
    // 
    // GUID conversion functions

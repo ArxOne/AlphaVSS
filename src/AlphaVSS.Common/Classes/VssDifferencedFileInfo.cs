@@ -2,7 +2,7 @@
 
 using System;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// 	Information about a file set (a specified file or files) to participate in an incremental or differential backup 

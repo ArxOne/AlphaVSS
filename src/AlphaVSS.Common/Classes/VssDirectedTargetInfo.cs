@@ -1,7 +1,7 @@
 
 
 using System;
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    ///		Represents information stored by a writer, at backup time, to the Backup Components Document to indicate that when a 

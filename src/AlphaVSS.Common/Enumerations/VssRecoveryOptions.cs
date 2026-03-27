@@ -1,7 +1,7 @@
 
 using System;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Used by a requester to specify how a resynchronization operation is to be performed.

@@ -2,7 +2,7 @@
 
 using System;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    ///		The <see cref="VssObjectType"/> enumeration is used by requesters to identify an object as 

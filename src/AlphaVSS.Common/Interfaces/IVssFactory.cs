@@ -1,7 +1,7 @@
 
 using System;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    ///     <c>IVssFactory</c> provides an interface to the global methods of the VSS API compiled for a specific 

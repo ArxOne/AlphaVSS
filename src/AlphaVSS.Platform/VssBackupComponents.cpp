@@ -11,7 +11,7 @@
 using namespace System::Collections::Generic;
 using namespace System::Security::Permissions;
 
-namespace Alphaleonis {
+namespace ArxOne {
    namespace Win32 {
       namespace Vss
       {

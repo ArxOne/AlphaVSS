@@ -1,7 +1,7 @@
 
 using System;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Interface for a provider that provides the correct implementation of <see cref="IVssFactory"/> which is used as the entry point to accessing the various VSS functions.

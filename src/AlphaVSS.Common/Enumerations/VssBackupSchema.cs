@@ -1,7 +1,7 @@
 
 using System;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>The <see cref="VssBackupSchema"/> enumeration is used by a writer to indicate the types of backup operations it can participate in. 
    /// The supported kinds of backup are expressed as a bit mask (or bitwise OR) of <see cref="VssBackupSchema"/> values.</summary>

@@ -15,7 +15,7 @@ using namespace System::Security::Permissions;
 [assembly:AssemblyTitleAttribute("AlphaVSS")];
 [assembly:AssemblyDescriptionAttribute(ALPHAVSS_DESCRIPTION_STR)];
 [assembly:AssemblyConfigurationAttribute("")];
-[assembly:AssemblyCompanyAttribute("Alphaleonis")];
+[assembly:AssemblyCompanyAttribute("ArxOne")];
 [assembly:AssemblyProductAttribute("AlphaVSS")];
 [assembly:AssemblyCopyrightAttribute(ALPHAVSS_COPYRIGHT_STR)];
 [assembly:AssemblyTrademarkAttribute("")];

@@ -1,6 +1,6 @@
 
 
-namespace Alphaleonis.Win32.Vss.Interfaces
+namespace ArxOne.Win32.Vss.Interfaces
 {
 #if false // This interface is not yet supported
     class ICreateWriterMetadata

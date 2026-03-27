@@ -3,7 +3,7 @@ using System;
 using System.Runtime.Serialization;
 using System.Security.Permissions;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
 
    /// <summary>
@@ -20,7 +20,7 @@ namespace Alphaleonis.Win32.Vss
       /// Initializes a new instance of the <see cref="VssDeleteSnapshotsFailedException"/> class.
       /// </summary>
       public VssDeleteSnapshotsFailedException()
-         : this(Alphaleonis.Win32.Vss.Resources.LocalizedStrings.DeletionOfSnapshotsFailed)
+         : this(ArxOne.Win32.Vss.Resources.LocalizedStrings.DeletionOfSnapshotsFailed)
       {
       }
 
@@ -53,7 +53,7 @@ namespace Alphaleonis.Win32.Vss
       /// <param name="nonDeletedSnapshotId">The id of the non deleted snapshot, or <see cref="Guid.Empty"/> if such information is not available.</param>
       /// <param name="innerException">The inner exception.</param>
       public VssDeleteSnapshotsFailedException(int deletedSnapshotsCount, Guid nonDeletedSnapshotId, Exception innerException)
-         : base(Alphaleonis.Win32.Vss.Resources.LocalizedStrings.DeletionOfSnapshotFailedSeeInnerExceptionF, innerException)
+         : base(ArxOne.Win32.Vss.Resources.LocalizedStrings.DeletionOfSnapshotFailedSeeInnerExceptionF, innerException)
       {
          m_deletedSnapshotsCount = deletedSnapshotsCount;
          m_nonDeletedSnapshotId = nonDeletedSnapshotId;

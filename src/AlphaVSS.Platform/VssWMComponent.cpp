@@ -3,7 +3,7 @@
 
 #include "VssWMComponent.h"
 
-namespace Alphaleonis { namespace Win32 { namespace Vss
+namespace ArxOne { namespace Win32 { namespace Vss
 {
 	VssWMComponent^ VssWMComponent::Adopt(::IVssWMComponent *component)
 	{

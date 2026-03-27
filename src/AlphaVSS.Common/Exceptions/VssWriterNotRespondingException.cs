@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Exception indicating that the writer is not responding.
@@ -16,7 +16,7 @@ namespace Alphaleonis.Win32.Vss
       /// Initializes a new instance of the <see cref="VssWriterNotRespondingException"/> class.
       /// </summary>
       public VssWriterNotRespondingException()
-         : base(Alphaleonis.Win32.Vss.Resources.LocalizedStrings.TheWriterIsNotResponding)
+         : base(ArxOne.Win32.Vss.Resources.LocalizedStrings.TheWriterIsNotResponding)
       {
       }
 

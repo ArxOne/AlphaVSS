@@ -4,7 +4,7 @@
 
 #include "VssDifferentialSoftwareSnapshotManagement.h"
 
-namespace Alphaleonis { namespace Win32 { namespace Vss
+namespace ArxOne { namespace Win32 { namespace Vss
 {
 
    /****************************************************************************************

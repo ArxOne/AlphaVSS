@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Exception indicating that the writer failed due to an error that would likely not occur if the entire backup, restore, or 
@@ -18,7 +18,7 @@ namespace Alphaleonis.Win32.Vss
       /// Initializes a new instance of the <see cref="VssRetryableWriterException"/> class.
       /// </summary>
       public VssRetryableWriterException()
-         : base(Alphaleonis.Win32.Vss.Resources.LocalizedStrings.VssRetryableWriterExceptionMessage)
+         : base(ArxOne.Win32.Vss.Resources.LocalizedStrings.VssRetryableWriterExceptionMessage)
       {
       }
 

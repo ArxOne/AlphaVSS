@@ -1,6 +1,6 @@
 
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>The <see cref="VssProviderType"/> enumeration specifies the provider type.</summary>
    public enum VssProviderType

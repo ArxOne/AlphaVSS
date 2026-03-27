@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
    <metadata>
-      <id>AlphaVSS.Native.NetFx</id>
+      <id>ArxOne.AlphaVSS.Native.NetFx</id>
       <version>1.0.0</version>
       <title>AlphaVSS.Native.NetFx</title>
-      <authors>alphaleonis</authors>
+      <authors>ArxOne</authors>
       <license type="expression">Apache-2.0</license>
-      <projectUrl>https://alphavss.alphaleonis.com/</projectUrl>
+      <projectUrl>https://github.com/ArxOne/AlphaVSS</projectUrl>
       <requireLicenseAcceptance>true</requireLicenseAcceptance>
       <description>A package containing the native binaries for AlphaVSS targetting .NET Framework.
 Do not install this package manually, it will be added as a prerequisite by the AlphaVSS package when required.</description>      
       <copyright>Copyright © Peter Palotas</copyright>      
       <tags>Win32, VSS</tags>
-      <repository type="git" url="https://github.com/alphaleonis/AlphaVSS.git" branch="$branch$" commit="$commit$" />
+      <repository type="git" url="https://github.com/ArxOne/AlphaVSS.git" branch="$branch$" commit="$commit$" />
       <dependencies>
          <group targetFramework="net45" />
       </dependencies>
@@ -22,6 +22,7 @@ Do not install this package manually, it will be added as a prerequisite by the 
       <file src="_._" target="lib\net45" />
       <file src="..\..\artifacts\net45\x86\AlphaVSS.x86.dll" target="build\net45" />
       <file src="..\..\artifacts\net45\x64\AlphaVSS.x64.dll" target="build\net45" />
+      <file src="..\..\artifacts\net45\arm64\AlphaVSS.arm64.dll" target="build\net45" />
       <file src="AlphaVSS.Native.NetFx.targets" target="build\net45" />
    </files>
 </package>

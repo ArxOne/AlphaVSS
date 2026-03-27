@@ -1,5 +1,5 @@
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>The <see cref="VssUsageType"/> enumeration specifies how the host system uses the data managed by a writer involved in a VSS operation.</summary>
    /// <remarks>Requester applications that are interested in backing up system state should look for writers with the 

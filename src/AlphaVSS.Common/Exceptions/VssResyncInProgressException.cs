@@ -2,7 +2,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Alphaleonis.Win32.Vss
+namespace ArxOne.Win32.Vss
 {
    /// <summary>
    /// Exception thrown to indicate that another LUN resynchronization operation is already in progress.
@@ -14,7 +14,7 @@ namespace Alphaleonis.Win32.Vss
       /// Initializes a new instance of the <see cref="VssResyncInProgressException"/> class.
       /// </summary>
       public VssResyncInProgressException() 
-         : base(Alphaleonis.Win32.Vss.Resources.LocalizedStrings.AnotherLUNResynchronizationOperationIsAlreadyInProgress)
+         : base(ArxOne.Win32.Vss.Resources.LocalizedStrings.AnotherLUNResynchronizationOperationIsAlreadyInProgress)
       { 
       }
 
