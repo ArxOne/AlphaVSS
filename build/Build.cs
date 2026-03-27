@@ -29,7 +29,8 @@ using Serilog;
    GitHubActionsImage.WindowsLatest,
    On = new [] { GitHubActionsTrigger.Push },
    InvokedTargets = new []{ nameof(Pack) },
-   PublishArtifacts = true)]
+   PublishArtifacts = true,
+   AutoGenerate = false)]
 class AlphaVssBuild : NukeBuild
 {
    public static int Main() => Execute<AlphaVssBuild>(x => x.Compile);
