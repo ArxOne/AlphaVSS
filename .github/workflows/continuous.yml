@@ -1,0 +1,31 @@
+
+name: continuous
+
+on: [push]
+
+jobs:
+  windows-2025-vs2026:
+    name: windows-2025-vs2026
+    runs-on: windows-2025-vs2026
+    steps:
+      - uses: actions/checkout@v6
+        with:
+            fetch-depth: 0
+      - uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: '3.1.x'
+
+      - name: 'Cache: .nuke/temp, ~/.nuget/packages'
+        uses: actions/cache@v4
+        with:
+          path: |
+            .nuke/temp
+            ~/.nuget/packages
+          key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj', '**/Directory.Packages.props') }}
+      - name: 'Run: Pack'
+        run: ./build.cmd Pack
+      - name: 'Publish: artifacts'
+        uses: actions/upload-artifact@v5
+        with:
+          name: artifacts
+          path: artifacts

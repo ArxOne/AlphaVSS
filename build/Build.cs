@@ -1,34 +1,36 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using Newtonsoft.Json;
+using System.Text;
+using System.Threading;
+
 using Nuke.Common;
+using Nuke.Common.CI.AzurePipelines;
+using Nuke.Common.CI.GitHubActions;
 using Nuke.Common.Execution;
 using Nuke.Common.Git;
 using Nuke.Common.IO;
 using Nuke.Common.ProjectModel;
 using Nuke.Common.Tooling;
-using Nuke.Common.Tools.DotNet;
 using Nuke.Common.Tools.GitVersion;
 using Nuke.Common.Tools.MSBuild;
 using Nuke.Common.Tools.VSWhere;
 using Nuke.Common.Tools.NuGet;
-using Nuke.Common.Utilities;
 using Nuke.Common.Utilities.Collections;
-using static Nuke.Common.EnvironmentInfo;
-using static Nuke.Common.IO.FileSystemTasks;
-using static Nuke.Common.Tools.NuGet.NuGetTasks;
-using Nuke.DocFX;
-using static Nuke.Common.IO.PathConstruction;
-using static Nuke.Common.Tools.MSBuild.MSBuildTasks;
-using Nuke.Common.CI.AzurePipelines;
-using System.Threading;
-using System.Text;
 
-[CheckBuildProjectConfigurations]
+using static Nuke.Common.Tools.NuGet.NuGetTasks;
+using static Nuke.Common.Tools.MSBuild.MSBuildTasks;
+
+using Serilog;
+
 [UnsetVisualStudioEnvironmentVariables]
 [MSBuildVerbosityMapping]
+[GitHubActions("continuous",
+   GitHubActionsImage.WindowsLatest,
+   On = new [] { GitHubActionsTrigger.Push },
+   InvokedTargets = new []{ nameof(Pack) },
+   PublishArtifacts = true,
+   AutoGenerate = false)]
 class AlphaVssBuild : NukeBuild
 {
    public static int Main() => Execute<AlphaVssBuild>(x => x.Compile);
@@ -52,10 +54,6 @@ class AlphaVssBuild : NukeBuild
    AbsolutePath SourceDirectory => RootDirectory / "src";
    AbsolutePath ArtifactsDirectory => RootDirectory / "artifacts";
    AbsolutePath NuSpecDirectory => RootDirectory / "build" / "nuget";
-   AbsolutePath DocFxFile => RootDirectory / "docs" / "docfx.json";
-   AbsolutePath PackageArtifactsDirectory => ArtifactsDirectory / "package";
-   AbsolutePath DocFxArtifactsDirectory => ArtifactsDirectory / "docs";
-   AbsolutePath DocFxZipFilePath => ArtifactsDirectory / "docs.zip";
 
    string MSBuildToolPath;
 
@@ -68,57 +66,26 @@ class AlphaVssBuild : NukeBuild
             .EnableLatest()
             .EnablePrerelease()
             .EnableUTF8()
-            .SetLogOutput(Verbosity == Verbosity.Verbose)
             .SetProperty("InstallationPath")
             .SetFormat(VSWhereFormat.value)
       ).Output.EnsureOnlyStd().FirstOrDefault().Text;
 
-      var vsInstance = result.FirstOrDefault().NotNull($"Unable to find VS version {RequiredMSBuildVersion}");
       MSBuildToolPath = Path.Combine(result, "MSBuild\\Current\\Bin\\MSBuild.exe");
-      Logger.Normal($"Using MSBuild at \"{MSBuildToolPath}\"");
-      MSBuildLogger = CustomMSBuildLogger;
-      NuGetLogger = CustomNuGetLogger;
-      if (IsServerBuild)
-      { 
-         AzurePipelines.Instance.UpdateBuildNumber($"AlphaVSS-{GitVersion.SemVer}")
-            ;
-      }
-   }
-
-   internal static void CustomMSBuildLogger(OutputType type, string output)
-   {
-      if (type == OutputType.Err || output.IndexOf(": error", StringComparison.Ordinal) != -1)
-         Logger.Error(output);
-      else if (output.IndexOf(": warning", StringComparison.Ordinal) != -1)
-         Logger.Warn(output);
-      else
-         Logger.Normal(output);
-
-   }
-
-   internal static void CustomNuGetLogger(OutputType type, string output)
-   {
-      if (type == OutputType.Err || output.StartsWith("ERROR:", StringComparison.OrdinalIgnoreCase))
-         Logger.Error(output);
-      else if (output.StartsWith("WARNING:", StringComparison.OrdinalIgnoreCase))
-         Logger.Warn(output);
-      else
-         Logger.Normal(output);
    }
 
    Target Clean => _ => _
         .Before(Restore)
         .Executes(() =>
         {
-           SourceDirectory.GlobDirectories("**/bin", "**/obj").ForEach(DeleteDirectory);
-           EnsureCleanDirectory(ArtifactsDirectory);
+           SourceDirectory.GlobDirectories("**/bin", "**/obj").ForEach(d => d.DeleteDirectory());
+           ArtifactsDirectory.CreateOrCleanDirectory();
         });
 
    Target Restore => _ => _
        .Executes(() =>
        {
           MSBuild(_ => _
-               .SetToolPath(MSBuildToolPath)
+               .SetProcessToolPath(MSBuildToolPath)
                .SetTargetPath(Solution)
                .SetTargets("Restore"));
        });
@@ -130,7 +97,6 @@ class AlphaVssBuild : NukeBuild
           BuildProject("AlphaVSS.Common", Configuration, "AnyCPU");
 
           BuildPlatformProject("core31");
-          BuildPlatformProject("net45");
 
 
           void BuildPlatformProject(string projectConfigurationPrefix)
@@ -138,6 +104,7 @@ class AlphaVssBuild : NukeBuild
              projectConfigurationPrefix = Configuration == Configuration.Debug ? $"{projectConfigurationPrefix}d" : projectConfigurationPrefix;
              BuildProject("AlphaVSS.Platform", projectConfigurationPrefix, "Win32");
              BuildProject("AlphaVSS.Platform", projectConfigurationPrefix, "x64");
+             BuildProject("AlphaVSS.Platform", projectConfigurationPrefix, "ARM64");
           }
 
           void BuildProject(string projectName, string configuration, string platform)
@@ -145,7 +112,7 @@ class AlphaVssBuild : NukeBuild
              var project = Solution.AllProjects.FirstOrDefault(p => p.Name == projectName).NotNull($"Unable to find project named {projectName} in solution {Solution.Name}");
 
              MSBuild(_ => _
-                  .SetToolPath(MSBuildToolPath)
+                  .SetProcessToolPath(MSBuildToolPath)
                   .SetTargetPath(project)
                   .SetTargetPlatform((MSBuildTargetPlatform)platform)
                   .SetConfiguration(configuration)
@@ -156,60 +123,23 @@ class AlphaVssBuild : NukeBuild
                   .AddProperty("BuildProjectReferences", false)
                   .AddProperty("AlphaVss_VersionMajor", 1)
                   .SetInformationalVersion(GitVersion.InformationalVersion)
-                  .SetMaxCpuCount(Environment.ProcessorCount)
-                  .SetNodeReuse(IsLocalBuild));
+                  .SetMaxCpuCount(Environment.ProcessorCount));
           }
        });
-
-   Target DocMetadata => _ => _
-      .DependsOn(Compile)
-      .Executes(() =>
-      {
-         DocFXTasks.DocFXMetadata(s => s
-            .SetProjects(DocFxFile)
-            .SetLogLevel(DocFXLogLevel.Verbose)            
-         );
-      });
-
-   Target DocBuild => _ => _
-      .DependsOn(DocMetadata)
-      .Executes(() =>
-      {
-         DocFXTasks.DocFXBuild(s => s
-            .SetConfigFile(DocFxFile)
-            .SetLogLevel(DocFXLogLevel.Verbose)
-            );         
-      });
-
-   Target DocPack => _ => _
-      .DependsOn(DocBuild)
-      .Executes(() =>
-      {
-         CompressionTasks.CompressZip(DocFxArtifactsDirectory, DocFxZipFilePath);
-      });
-
-   Target ServeDocs => _ => _
-      .DependsOn(DocBuild)
-      .OnlyWhenStatic(() => IsLocalBuild)
-      .Executes(() =>
-      {
-         DocFXTasks.DocFXServe(s => s
-            .SetFolder(ArtifactsDirectory / "docs")
-         );
-      });
 
    Target Build => _ => _
       .DependsOn(Clean, Compile);
 
    Target Pack => _ => _
       .DependsOn(Build)
+      .Produces(ArtifactsDirectory)
       .Executes(() =>
       {
          var version = GitVersion.NuGetVersion;
          if (IsLocalBuild)
             version += DateTime.UtcNow.ToString("yyMMddHHmmss");
 
-         foreach (var nuspec in GlobFiles(NuSpecDirectory, "*.nuspec"))
+         foreach (var nuspec in NuSpecDirectory.GlobFiles("*.nuspec"))
          {
             NuGetPack(s => s
                .SetMSBuildPath(MSBuildToolPath)
@@ -227,7 +157,7 @@ class AlphaVssBuild : NukeBuild
       .Requires(() => FeedUri)
       .Executes(() =>
       {
-         foreach (var file in GlobFiles(ArtifactsDirectory, "*.nupkg"))
+         foreach (var file in ArtifactsDirectory.GlobFiles("*.nupkg"))
          {
             NuGetPush(s => s
                .SetApiKey(NuGetApiKey)
@@ -237,18 +167,17 @@ class AlphaVssBuild : NukeBuild
       });
 
    Target UploadArtifacts => _ => _
-      .DependsOn(Clean, Pack, DocPack)
+      .DependsOn(Clean, Pack)
       .OnlyWhenStatic(() => IsServerBuild)
       .Executes(() =>
       {
-         foreach (var file in GlobFiles(ArtifactsDirectory, "*.nupkg"))
+         foreach (var file in ArtifactsDirectory.GlobFiles("*.nupkg"))
          {
             UploadAzureArtifact("Package", "Package", file);
          }
          //UploadAzureArtifact("Package", "Package", null);
          
          Thread.Sleep(2000);
-         AzurePipelines.Instance.UploadArtifacts("docs", "docs", DocFxZipFilePath);         
       });
 
    private void UploadAzureArtifact(string containerFolder, string artifactName, string fileName)
