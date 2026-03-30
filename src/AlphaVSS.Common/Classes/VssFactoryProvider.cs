@@ -26,7 +26,7 @@ namespace ArxOne.Win32.Vss
       private readonly IVssAssemblyResolver m_resolver;
       private readonly Lazy<Assembly> m_assembly;
 
-      private static string PlatformSpecificAssemblyShortName => $"AlphaVSS.{(RuntimeInformation.ProcessArchitecture switch { Architecture.X64 => "x64", Architecture.X86 => "x86", Architecture.Arm => "arm32", Architecture.Arm64 => "arm64", _ => throw new PlatformNotSupportedException() })}";
+      private static string PlatformSpecificAssemblyShortName => $"AlphaVSS.{(RuntimeInformation.OSArchitecture switch { Architecture.X64 => "x64", Architecture.X86 => "x86", Architecture.Arm => "arm32", Architecture.Arm64 => "arm64", _ => throw new PlatformNotSupportedException() })}";
       private static AssemblyName PlatformSpecificAssemblyName => new AssemblyName($"{PlatformSpecificAssemblyShortName}, Version={Assembly.GetExecutingAssembly().GetName().Version}, Culture=neutral, PublicKeyToken=959d3993561034e3");
 
       /// <summary>
